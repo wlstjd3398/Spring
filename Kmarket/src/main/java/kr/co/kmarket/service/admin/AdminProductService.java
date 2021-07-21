@@ -45,7 +45,7 @@ public class AdminProductService {
 	// 상품이미지 업로드
 	public ProductVo uploadThumb(ProductVo vo) {
 		
-		File file = new File("src/main/resource/static/thumb/");
+		File file = new File("src/main/resources/static/thumb/");
 		String path = file.getAbsolutePath();
 		
 		MultipartFile[] files = {
