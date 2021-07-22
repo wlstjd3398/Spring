@@ -82,9 +82,7 @@ public class AdminProductService {
 				}
 			}
 		}
-		
 		return vo;
-		
 	}// uploadThumb end
 }
 
