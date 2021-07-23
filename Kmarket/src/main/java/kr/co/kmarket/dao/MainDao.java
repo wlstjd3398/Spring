@@ -12,4 +12,7 @@ public interface MainDao {
 
 	public List<CategoriesVo> selectCategories();
 	public List<ProductVo> selectHitProduct();
+	public List<ProductVo> selectRecommendProduct();
+	public List<ProductVo> selectLatestProduct();
+	public List<ProductVo> selectDiscountProduct();
 }

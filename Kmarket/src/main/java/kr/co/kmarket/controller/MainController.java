@@ -22,8 +22,10 @@ public class MainController {
 	public String index(Model model) {
 		
 		List<ProductVo> productsHit = service.selectHitProduct();
+		List<ProductVo> productsRecommend = service.selectRecommendProduct();
 		
 		model.addAttribute("productsHit", productsHit);
+		model.addAttribute("productsRecommend", productsRecommend);
 		
 		return "/index";
 	}
@@ -34,5 +36,16 @@ public class MainController {
 		return service.selectCategories();
 	}
 	
+	@ResponseBody
+	@GetMapping("/getLatestProduct")
+	public List<ProductVo> getLatestProduct() {
+		return service.selectLatestProduct();
+	}
+	
+	@ResponseBody
+	@GetMapping("/getDiscountProduct")
+	public List<ProductVo> getDiscountProduct() {
+		return service.selectDiscountProduct();
+	}
 	
 }

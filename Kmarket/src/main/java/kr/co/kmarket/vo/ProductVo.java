@@ -45,6 +45,7 @@ public class ProductVo {
 	private MultipartFile file3;
 	private MultipartFile file4;
 	
+	private int salePrice;
 	
 	
 
