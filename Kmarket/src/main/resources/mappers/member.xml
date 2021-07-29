@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.kmarket.dao.MemberDao">
+
+	<select id="selectMember" resultType="kr.co.kmarket.vo.MemberVo">
+		SELECT * FROM `km_member` WHERE `uid`=#{uid} AND `pass`=PASSWORD(#{pass});
+	</select>
+	
+	
+	<update id="updateMemberPointMinus">
+		UPDATE `km_member` SET `point` = `point` - #{applyPoint} WHERE `uid`=#{uid};	
+	</update>
+	
+	<update id="updateMemberPointPlus">
+		UPDATE `km_member` SET `point` = `point` + #{point} WHERE `uid`=#{uid};	
+	</update>
+
+</mapper>
+
